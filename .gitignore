@@ -48,3 +48,6 @@ next-env.d.ts
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
+
+# Husky
+.husky
