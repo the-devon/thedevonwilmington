@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { GeistSans } from "geist/font/sans";
 import { Italiana } from 'next/font/google'
 import './globals.css'
@@ -21,7 +22,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.variable} ${italiana.variable}`}>{children}</body>
+      <body className={`${GeistSans.variable} ${italiana.variable}`}>
+        {children}
+        <SpeedInsights />
+      </body>
     </html>
   )
 }
