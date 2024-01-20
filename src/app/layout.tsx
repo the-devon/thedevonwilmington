@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GeistSans } from 'geist/font/sans';
 import { Italiana } from 'next/font/google';
+import { Providers } from './providers';
 import './globals.css';
 
 const italiana = Italiana({
@@ -21,9 +22,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body className={`${GeistSans.variable} ${italiana.variable}`}>
-        {children}
+        <Providers>{children}</Providers>
         <SpeedInsights />
       </body>
     </html>

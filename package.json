@@ -10,7 +10,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.1",
+    "@nextui-org/react": "^2.2.9",
     "@vercel/speed-insights": "^1",
+    "framer-motion": "^10.18.0",
     "geist": "^1",
     "husky": "^8",
     "lint-staged": "^15",
