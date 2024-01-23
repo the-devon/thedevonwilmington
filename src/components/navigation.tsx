@@ -17,6 +17,7 @@ import {
   NavbarMenuToggle,
 } from '@nextui-org/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import { ArrowTopRightOnSquareIcon, LinkIcon } from '@heroicons/react/16/solid';
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -91,31 +92,53 @@ export function Navigation() {
                 'data-[pressed=true]:opacity-70',
                 'data-[focus-visible=true]:ring-default-500',
               ],
+              title: ['text-base'],
             }}
           >
-            <DropdownItem key="resident_portal">Resident portal</DropdownItem>
-            <DropdownItem key="real_state_agent_resources">
+            <DropdownItem
+              classNames={{ wrapper: ['text-2xl text-white'] }}
+              className="text-2xl"
+              key="resident_portal"
+              startContent={
+                <ArrowTopRightOnSquareIcon className="h-4 w-4 text-primary" />
+              }
+            >
+              Resident portal
+            </DropdownItem>
+            <DropdownItem
+              key="real_state_agent_resources"
+              startContent={
+                <ArrowTopRightOnSquareIcon className="h-4 w-4 text-primary" />
+              }
+            >
               Real Estate Agent Resources
             </DropdownItem>
-            <DropdownItem key="floor_plans">Floor Plans</DropdownItem>
+            <DropdownItem
+              classNames={{
+                base: 'text-2xl text-primary',
+                wrapper: 'text-2xl text-primary',
+                title: 'text-2xl text-primary',
+                description: 'text-2xl text-primary',
+                shortcut: 'text-2xl text-primary',
+                selectedIcon: 'text-2xl text-primary',
+              }}
+              key="floor_plans"
+              startContent={
+                <ArrowTopRightOnSquareIcon className="h-4 w-4 text-primary" />
+              }
+            >
+              Floor Plans
+            </DropdownItem>
           </DropdownMenu>
         </Dropdown>
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color={
-                index === 2
-                  ? 'primary'
-                  : index === menuItems.length - 1
-                    ? 'danger'
-                    : 'foreground'
-              }
-              className="w-full"
-              href="#"
-              size="lg"
-            >
+            <Link color="foreground" className="w-full" href="#" size="lg">
+              {index > 2 && (
+                <ArrowTopRightOnSquareIcon className="mr-2 h-4 w-4 text-primary" />
+              )}
               {item}
             </Link>
           </NavbarMenuItem>
@@ -124,3 +147,5 @@ export function Navigation() {
     </Navbar>
   );
 }
+
+// Record<"base"｜ "wrapper"｜ "title"｜ "description"｜ "shortcut" ｜ "selectedIcon", string>
