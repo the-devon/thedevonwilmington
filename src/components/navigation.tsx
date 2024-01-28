@@ -96,8 +96,6 @@ export function Navigation() {
             }}
           >
             <DropdownItem
-              classNames={{ wrapper: ['text-2xl text-white'] }}
-              className="text-2xl"
               key="resident_portal"
               startContent={
                 <ArrowTopRightOnSquareIcon className="h-4 w-4 text-primary" />
@@ -114,14 +112,6 @@ export function Navigation() {
               Real Estate Agent Resources
             </DropdownItem>
             <DropdownItem
-              classNames={{
-                base: 'text-2xl text-primary',
-                wrapper: 'text-2xl text-primary',
-                title: 'text-2xl text-primary',
-                description: 'text-2xl text-primary',
-                shortcut: 'text-2xl text-primary',
-                selectedIcon: 'text-2xl text-primary',
-              }}
               key="floor_plans"
               startContent={
                 <ArrowTopRightOnSquareIcon className="h-4 w-4 text-primary" />
