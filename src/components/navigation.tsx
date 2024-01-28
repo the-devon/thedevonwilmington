@@ -98,7 +98,7 @@ export function Navigation() {
             <DropdownItem
               key="resident_portal"
               startContent={
-                <ArrowTopRightOnSquareIcon className="h-4 w-4 text-primary" />
+                <ArrowTopRightOnSquareIcon className="h-4 w-4 text-default-400" />
               }
             >
               Resident portal
@@ -106,7 +106,7 @@ export function Navigation() {
             <DropdownItem
               key="real_state_agent_resources"
               startContent={
-                <ArrowTopRightOnSquareIcon className="h-4 w-4 text-primary" />
+                <ArrowTopRightOnSquareIcon className="h-4 w-4 text-default-400" />
               }
             >
               Real Estate Agent Resources
@@ -114,7 +114,7 @@ export function Navigation() {
             <DropdownItem
               key="floor_plans"
               startContent={
-                <ArrowTopRightOnSquareIcon className="h-4 w-4 text-primary" />
+                <ArrowTopRightOnSquareIcon className="h-4 w-4 text-default-400" />
               }
             >
               Floor Plans
@@ -127,7 +127,7 @@ export function Navigation() {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link color="foreground" className="w-full" href="#" size="lg">
               {index > 2 && (
-                <ArrowTopRightOnSquareIcon className="mr-2 h-4 w-4 text-primary" />
+                <ArrowTopRightOnSquareIcon className="mr-2 h-4 w-4 text-default-400" />
               )}
               {item}
             </Link>
