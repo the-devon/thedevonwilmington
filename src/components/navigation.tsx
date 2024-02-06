@@ -32,14 +32,24 @@ export function Navigation() {
   ];
 
   return (
-    <Navbar className="bg-background" onMenuOpenChange={setIsMenuOpen}>
+    <Navbar
+      className="col-span-3 col-start-1"
+      classNames={{ wrapper: 'px-4' }}
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           className="sm:hidden"
         />
         <NavbarBrand>
-          <Link color="foreground" size="lg" href="#" aria-current="page">
+          <Link
+            className="text-xl"
+            color="foreground"
+            size="lg"
+            href="#"
+            aria-current="page"
+          >
             The Devon
           </Link>
         </NavbarBrand>
@@ -47,17 +57,17 @@ export function Navigation() {
 
       <NavbarContent className="hidden gap-4 sm:flex" justify="center">
         <NavbarItem>
-          <Link color="foreground" size="lg" href="#">
+          <Link className="text-xl" color="foreground" size="lg" href="#">
             Neighborhood
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" size="lg" href="#">
+          <Link className="text-xl" color="foreground" size="lg" href="#">
             Amenities
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" size="lg" href="#">
+          <Link className="text-xl" color="foreground" size="lg" href="#">
             Contact
           </Link>
         </NavbarItem>
@@ -70,7 +80,7 @@ export function Navigation() {
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="bg-transparent p-0 text-lg data-[hover=true]:bg-transparent"
+                className="bg-transparent p-0 text-xl font-light data-[hover=true]:bg-transparent"
                 endContent={<ChevronDownIcon className="h-5 w-5" />}
                 variant="light"
               >
@@ -125,7 +135,7 @@ export function Navigation() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link color="foreground" className="w-full" href="#" size="lg">
+            <Link color="foreground" className="w-full text-xl" href="#">
               {index > 2 && (
                 <ArrowTopRightOnSquareIcon className="mr-2 h-4 w-4 text-default-400" />
               )}
@@ -137,5 +147,3 @@ export function Navigation() {
     </Navbar>
   );
 }
-
-// Record<"base"｜ "wrapper"｜ "title"｜ "description"｜ "shortcut" ｜ "selectedIcon", string>
