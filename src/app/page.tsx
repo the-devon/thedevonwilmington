@@ -1,4 +1,10 @@
-import { Hero, Navigation, Neighborhood, Overview } from '@/components';
+import {
+  Amenities,
+  Hero,
+  Navigation,
+  Neighborhood,
+  Overview,
+} from '@/components';
 
 export default function Home() {
   return (
@@ -11,6 +17,8 @@ export default function Home() {
         <Overview />
 
         <Neighborhood />
+
+        <Amenities />
       </main>
     </div>
   );
