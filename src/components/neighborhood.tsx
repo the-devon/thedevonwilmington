@@ -1,5 +1,32 @@
 import Image from 'next/image';
 
+/**
+ * `galleryColumns` is a 2D array representing the structure of a gallery grid.
+ * Each inner array represents a column of the gallery.
+ * Each object within these columns represents a single image on display.
+ *
+ * Each image object has two properties:
+ * 1. `source`: (string) relative path or URL to the image file
+ * 2. `orientation`: (string) can be either 'landscape' or 'portrait'. This
+ * property represents the orientation of the image and is crucial for
+ * maintaining the overall layout of the gallery grid. It should not be changed
+ * after it has been set.
+ *
+ * An image's `orientation` not only impacts the display of the individual
+ * image, but it is vital for the layout of the gallery grid.
+ * The system uses this value to calculate and allocate the necessary space for
+ * each image, hence it should not be changed to maintain the shape of the
+ * gallery.
+ *
+ * Images used for each object should comply with the orientation to maintain
+ * consistency and response throughout the gallery. If the orientation is equal
+ * to 'landscape', the image `width` should be 1920 and the `height` 1280. If
+ * the orientation is 'portrait', the `width` should be 1280 and the `height` 1920.
+ *
+ * Remember, in-case the `source` or `orientation` for an image needs to be
+ * changed, it's crucial to ensure that the new image aligns with the stated
+ * orientation and dimensions for accurate rendering of the gallery.
+ **/
 const galleryColumns = [
   [
     { source: '/landscape.png', orientation: 'landscape' },
